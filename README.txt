@@ -3,9 +3,9 @@ TITLE:
 Marble - Fully Responsive Free HTML5 template
 
 AUTHOR:
-DESIGNED & DEVELOPED by FREEHTML5.co
+DESIGNED & DEVELOPED by leaderchair.netlify.app/
 
-Website: http://freehtml5.co/
+Website: http://leaderchair.netlify.app//
 Twitter: http://twitter.com/fh5co
 Facebook: http://facebook.com/fh5co
 
