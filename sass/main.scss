@@ -1,0 +1,15 @@
+.price-old p, .price-new p, .price-old,.price-new{
+    margin: 0;
+    display: flex;
+    gap: 3px;
+}
+.price-new, .price-old{
+    margin-bottom: 10px;
+}
+.price-old{
+    text-decoration: line-through;
+}
+.desc h3{
+    font-weight: 700;
+    font-size: 34px;
+}
