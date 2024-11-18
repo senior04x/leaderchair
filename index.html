@@ -8,6 +8,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Leader Chair</title>
+	<!-- API url -->
+	<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Выбор комфорта и стиля" />
 	<meta name="keywords" content="leader chair, kreslolar, ofis uchun kreslolar, krelolar, design sofa, sofa, stul va stollar, ofis uchun" />
@@ -80,7 +82,7 @@
 			<aside id="fh5co-hero" class="js-fullheight">
 				<div class="flexslider js-fullheight">
 					<ul class="slides" style="align-items: center;">
-				   	<li style="background-image: url(images/001.png); height: 100vh;">
+				   	<li style="background-image: url(images/img_bg.jpg); height: 100vh;">
 				   		<div class="overlay"></div>
 				   		<div class="container-fluid">
 				   			<div class="row">
@@ -149,19 +151,21 @@
 				</div>
 			</div>
 			<div class="fh5co-narrow-content" id="mainProduct">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Recent Blog</h2>
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Products</h2>
 				<div class="row row-bottom-padded-md">
-					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-						<div class="blog-entry">
-							<a href="single.html" class="blog-img"><img src="images/001.png" class="img-responsive" alt="img"></a>
-							<div class="desc">
-								<h3>Rhombic</h3>
-									<h5 class="price-old">250 000 <p>som</p></h5>
-                                    <h4 class="price-new">140 000 <p>som</p></h4>
-								<a href="#" class="lead">add korzina<i class="icon-arrow-right3"></i></a>
+						<div class="col-md-3 col-sm-6 col-padding animate-box" id="products-container">
+							<template id="template">
+							<div class="blog-entry">
+								<a href="#" class="blog-img"><img src="images/001.png" class="img-responsive" alt="img"></a>
+								<div class="desc">
+									<h3 class="title">Rhombic</h3>
+									<h5 class="price-old">aas</h5>
+									<h4 class="price-new">asa</h4>
+									<a href="#" class="lead">Add to Cart <i class="icon-arrow-right3"></i></a>
+								</div>
 							</div>
+						</template>
 						</div>
-					</div>
 				</div>
 			</div>
 
@@ -194,11 +198,12 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
-	
+	<!-- Render product -->
+	<script type="module" src="js/render.js"></script>
 	
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
-
+   
 	</body>
 </html>
 
