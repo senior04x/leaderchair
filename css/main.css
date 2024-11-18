@@ -67,4 +67,8 @@
       align-content: center;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+.logo {
+  width: 150px;
 }/*# sourceMappingURL=main.css.map */
