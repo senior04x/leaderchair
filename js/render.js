@@ -8,7 +8,7 @@ const elWrapperProducts = findElement("#products-container");
 const elTemplate = findElement("#template");
 
 let pageCount = 1;
-const perPage = 6;
+const perPage = 4;
 let filteredProducts = [];
 
 // Mahsulotlarni olish
