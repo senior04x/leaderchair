@@ -10,6 +10,7 @@ const elTemplate = findElement("#template");
 let pageCount = 1;
 const perPage = 4;
 let filteredProducts = [];
+let basket = []; // Savatcha uchun massiv
 
 // Mahsulotlarni olish
 function fetchProducts() {
@@ -34,15 +35,19 @@ function renderProducts() {
     const elImg = findElement(".img-responsive", newTemplate);
     elImg.src = product.imageSrc;
     elImg.dataset.id = product.id;
+    elImg.addEventListener("click", () => redirectToSinglePage(product.id)); // Single pagega o'tish uchun
 
     const elTitle = findElement(".title", newTemplate);
     elTitle.textContent = shortenTitle(product.title); // Sarlavhani qisqartirish
 
     const elPriceOld = findElement(".price-old", newTemplate);
-    elPriceOld.textContent = product.oldPrice;
+    elPriceOld.textContent = product.oldPrice + "sum";
 
     const elPriceNew = findElement(".price-new", newTemplate);
-    elPriceNew.textContent = product.newPrice;
+    elPriceNew.textContent = product.newPrice + "sum";
+
+    const elAddToBasket = findElement(".lead", newTemplate);
+    elAddToBasket.addEventListener("click", () => addToBasket(product)); // Savatchaga qo'shish uchun
 
     elWrapperProducts.appendChild(newTemplate);
   });
@@ -56,4 +61,16 @@ document.addEventListener("DOMContentLoaded", () => {
 // Mahsulot sarlavhasini qisqartirish
 function shortenTitle(title, maxLength = 50) {
   return title.length > maxLength ? title.slice(0, maxLength) + "..." : title;
+}
+
+// Savatchaga mahsulot qo'shish
+function addToBasket(product) {
+  basket.push(product);
+  console.log("Savatchaga qo'shildi:", product);
+  alert(`${product.title} savatchaga qo'shildi!`);
+}
+
+// Mahsulotni single sahifasiga yo'naltirish
+function redirectToSinglePage(productId) {
+  window.location.href = `single.html?id=${productId}`;
 }

@@ -1789,3 +1789,10 @@
   content: "\eb1a";
 }
 
+.icon-basket:before {
+  content: "\e901";
+}
+.icon-cart:before {
+  content: "\e900";
+}
+

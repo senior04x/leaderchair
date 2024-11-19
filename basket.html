@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basket</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <!-- Savatcha -->
+  <h2>Your Basket</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="basket-items">
+      <!-- Savatcha mahsulotlari shu yerga render qilinadi -->
+    </tbody>
+  </table>
+  
+  <!-- Savatchani tozalash -->
+  <button id="clear-basket">Clear Basket</button>
+  
+  <script src="basket.js"></script>
+</body>
+</html>

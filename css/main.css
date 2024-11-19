@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .price-old p, .price-new p, .price-old, .price-new {
   margin: 0;
   display: -webkit-box;
@@ -10,7 +11,7 @@
   margin-bottom: 10px;
 }
 
-.price-old {
+.price-old, .product-price-old {
   text-decoration: line-through;
 }
 
@@ -67,8 +68,130 @@
       align-content: center;
   -ms-flex-item-align: center;
       align-self: center;
+  background-color: transparent;
+  border: none;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  outline: none;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.lead:hover {
+  color: #386641;
+  outline: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .logo {
   width: 150px;
+}
+
+.blog-img2 {
+  display: inline-block; /* Rasmni o'z ichida ushlab turish */
+  overflow: hidden; /* Rasm tashqariga chiqib ketmasligi uchun */
+}
+
+.blog-img2 img {
+  display: block; /* Rasmni blok kabi ko‘rsatish */
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease; /* Transform effektini qo‘shish */
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.blog-img2:hover img {
+  -webkit-transform: scale(1);
+          transform: scale(1); /* Hoverda rasmni kattalashtirish */
+}
+
+.blog-img2 {
+  position: relative;
+}
+
+.img-text {
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .img-text {
+    width: 80px;
+  }
+}
+
+.img-text2 {
+  width: 100px;
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .img-text2 {
+    width: 80px;
+    display: block;
+    left: 35px;
+    top: 28px;
+  }
+}
+
+.fh5co-heading {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-heading {
+    font-size: 23px;
+    margin-top: 15px;
+    margin-bottom: 4px;
+  }
+}
+
+.product-description {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .product-description {
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 4px;
+  }
+}
+
+.product-price-old {
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+}
+
+.product-price-new {
+  font-size: 40px;
+  font-weight: 550;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .product-price-new {
+    font-size: 30px;
+  }
+}
+
+.fh5co-footer ul li a {
+  font-size: 17px;
+}
+
+.order-box:nth-child(2) {
+  background-color: #386641;
 }/*# sourceMappingURL=main.css.map */

@@ -12,14 +12,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Выбор комфорта и стиля" />
-	<meta name="keywords" content="leader chair, kreslolar, ofis uchun kreslolar, krelolar, design sofa, sofa, stul va stollar, ofis uchun" />
+	<meta name="keywords" content="leader chair, kreslolar, ofis uchun kreslolar, krelolar, design sofa, sofa, stul va stollar, ofis uchun, офисные кресла, кресла для офиса, кресла, дизайнерские кресла, диваны, дизайн-диваны, стулья и столы, офисная мебель" />
 	<meta name="author" content="Leader Chair" />
 
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content="Leader Chair"/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
+	<meta property="og:image" content="https://iili.io/25cdKg4.png"/>
+	<meta property="og:url" content="leaderchair.uz"/>
+	<meta property="og:site_name" content="leaderchair.uz"/>
 	<meta property="og:description" content=""/>
 	<meta name="twitter:title" content="" />
 	<meta name="twitter:image" content="" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:card" content="" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<link class="icon-logo-title" rel="shortcut icon" href="images/icon-logo.png">
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 	
@@ -56,13 +56,14 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight" >
       
-			<h1 id="fh5co-logo"><a href="index.html"><img class="logo" src="./images/logo.jpg" alt=""></a></h1>
+			<h1 id="fh5co-logo"><a href="index.html"><img class="logo" src="./images/logo.png" alt=""></a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li class="fh5co-active"><a href="index.html">Home</a></li>
 					<li><a href="blog.html">Blog</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
+					<li><a href="basket.html">Basket</a></li>
 				</ul>
 			</nav>
 
@@ -70,9 +71,9 @@
 				<p><small>&copy; 2024 Leader Chair. All Rights Reserved.</span></p>
 				<ul>
 					<li><a href="#"><i class="icon-facebook2"></i></a></li>
-					<li><a href="#"><i class="icon-twitter2"></i></a></li>
+					<li><a href="#"><i class="icon-telegram"></i></a></li>
 					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
+					<li><a href="#"><i class="icon-location"></i></a></li>
 				</ul>
 			</div>
 
@@ -156,12 +157,12 @@
 						<div class="col-md-3 col-sm-6 col-padding animate-box" id="products-container">
 							<template id="template">
 							<div class="blog-entry">
-								<a href="#" class="blog-img2"><img src="images/001.png" class="img-responsive" alt="img"></a>
+								<a href="#" class="blog-img2"><img src="images/001.png" class="img-responsive" alt="img"><img class="img-text" src="images/logo.png" alt=""></a>
 								<div class="desc">
 									<h3 class="title">Rhombic</h3>
 									<h5 class="price-old">aas</h5>
 									<h4 class="price-new">asa</h4>
-									<a href="#" class="lead">Add to basket<img class="icon-bassket" src="./images/card.png" alt=""></a>
+									<button class="lead">Add to basket <i class="icon-bag"></i></button>
 								</div>
 							</div>
 						</template>
@@ -200,7 +201,8 @@
 	<script src="js/jquery.flexslider-min.js"></script>
 	<!-- Render product -->
 	<script type="module" src="js/render.js"></script>
-	
+	<!-- Basket js -->
+	<script src="js/basket.js"></script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
    
