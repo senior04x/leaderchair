@@ -1,5 +1,8 @@
 @charset "UTF-8";
-.price-old p, .price-new p, .price-old, .price-new {
+.price-old p,
+.price-new p,
+.price-old,
+.price-new {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7,11 +10,13 @@
   gap: 3px;
 }
 
-.price-new, .price-old {
+.price-new,
+.price-old {
   margin-bottom: 10px;
 }
 
-.price-old, .product-price-old {
+.price-old,
+.product-price-old {
   text-decoration: line-through;
 }
 
@@ -198,4 +203,248 @@
 
 .order-box:nth-child(2) {
   background-color: #386641;
+}
+
+/* Modalning stilini yaratamiz */
+.modal {
+  display: none; /* Dastlab modal yashirin bo‘ladi */
+  position: fixed;
+  z-index: 1; /* Modal boshqa elementlardan oldin chiqishi uchun */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ekranning to‘liq kengligi */
+  height: auto; /* Ekranning to‘liq balandligi */
+  background-color: rgba(0, 0, 0, 0.5); /* Orqa fonni dim qilish */
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease; /* Sekin ochilish uchun */
+}
+
+/* Modal ichidagi kontent */
+.modal-content {
+  top: 0;
+  background-color: #fff;
+  margin: 5% auto; /* Markazlashtirish */
+  padding: 20px;
+  border: none;
+  width: 80%; /* Modalning kengligi */
+  max-width: 500px; /* Maksimal kenglik */
+  background-color: transparent;
+  background: rgba(56, 102, 65, 0.2352941176); /* Qoraytirish (0.5 = 50%) */
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px); /* Blur effekti */
+  -webkit-transition: right 0.5s ease;
+  transition: right 0.5s ease;
+  z-index: 1000;
+  -webkit-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3);
+  -webkit-animation: slideIn 0.5s ease;
+          animation: slideIn 0.5s ease; /* Ichki kontentga kirish animatsiyasi */
+}
+
+/* Yopish tugmasi */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset; /* Orqa fonni shaffof qilib o'rnatish */
+  -webkit-text-fill-color: #fff; /* Matn rangini qora qilish */
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: transparent;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-transform 0.3s ease;
+  outline: none;
+}
+
+.modal-content form input::-webkit-input-placeholder, .modal-content form textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6117647059);
+  font-size: 18px;
+}
+
+.modal-content form input::-moz-placeholder, .modal-content form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6117647059);
+  font-size: 18px;
+}
+
+.modal-content form input:-ms-input-placeholder, .modal-content form textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6117647059);
+  font-size: 18px;
+}
+
+.modal-content form input::-ms-input-placeholder, .modal-content form textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6117647059);
+  font-size: 18px;
+}
+
+.modal-content form input::placeholder,
+.modal-content form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6117647059);
+  font-size: 18px;
+}
+
+.modal-content form input:hover,
+.modal-content form textarea:hover {
+  -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.modal-content form input:focus,
+.modal-content form textarea:focus {
+  outline: none;
+  -webkit-box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.15);
+  /* transform: translateY(-3px); */
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.modal-content form label {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.modal-content form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: rgba(56, 102, 65, 0.6862745098);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .modal-content form input::-webkit-input-placeholder {
+    display: none;
+  }
+  .modal-content form input::-moz-placeholder {
+    display: none;
+  }
+  .modal-content form input:-ms-input-placeholder {
+    display: none;
+  }
+  .modal-content form input::-ms-input-placeholder {
+    display: none;
+  }
+  .modal-content form input::placeholder {
+    display: none;
+  }
+}
+.modal-img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.modal-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-title3 {
+  color: #fff;
+}
+
+/* Kontent kirish animatsiyasi */
+@-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.quantity-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#quantity {
+  width: 32px;
+  padding: 8px 0;
+  margin-top: 10px;
+  border-radius: 0;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.btn-modal-order, .minus {
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 0;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 25px;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
 }/*# sourceMappingURL=main.css.map */

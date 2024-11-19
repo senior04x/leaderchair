@@ -27,6 +27,7 @@
     
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
         
+      
         <!-- Animate.css -->
         <link rel="stylesheet" href="css/animate.css">
         <!-- Icomoon Icon Fonts-->
@@ -45,7 +46,8 @@
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->
-    
+     <!-- link bootstrap -->
+ 
         </head>
 <body>
 <div id="fh5co-page">
@@ -88,12 +90,81 @@
         <p class="product-price-new">0 000 000 <span>sum</span></p>
        <div class="order-box">
         <button class="lead">Add to basket <i class="icon-bag"></i></button>
-        <button class="lead" style="background-color: #386641; color: #fff; padding: 6px 15px;">Hoziroq buyurtma bering <i class="icon-phone"></i></button>
+        <button class="lead" id="openModalBtn" style="background-color: #386641; color: #fff; padding: 6px 15px;">Hoziroq buyurtma bering <i class="icon-phone"></i></button>
        </div>
       </div>
     </div>
 </div>
+
 </div>
+
+</div>
+<!-- modal bootstrap -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="modal-box">
+        
+      <img class="modal-img" src="" alt="">
+      <div class="modal-order-box">
+        <h2 class="fh5co-heading" id="product__input_title"></h2>
+        <div class="quantity-controls">
+          <button class="btn-modal-order minus">-</button>
+          <input type="number" id="quantity" value="1" min="1" >
+          <button class="btn-modal-order plus">+</button>
+      </div>
+      </div>
+      </div>
+      <form action="https://formspree.io/f/xjkvbyel" method="post">
+        
+        <input 
+        type="hidden"
+        id="product__order_number"
+        name="Количество"
+        required
+        >
+        <!-- <label for="name"
+        >Название товара</label
+      > -->
+      <input
+        type="hidden"
+        id="product__input_title"
+        name="товар"
+        required
+        readonly
+      />
+        <label for="name"
+          >Ваше имя</label
+        >
+        <input
+          placeholder="Ваше имя"
+          type="text"
+          id="name"
+          name="имя"
+          required
+        />
+        <label for="phone"
+          >Ваш номер телефона</label
+        >
+        <input
+       
+          placeholder="+998 00-000-00-00"
+          type="tel"
+          id="phone"
+          name="номер телефона"
+         
+          maxlength="17"
+          required
+        />
+        <button
+          style="margin-bottom: 20px"
+          class="form-button"
+          type="submit"
+        >
+        Отправить
+        </button>
+      </form>
+  </div>
 </div>
   <script type="module" src="js/single.js"></script>
   	<!-- jQuery -->
@@ -112,5 +183,6 @@
 	<script src="js/basket.js"></script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+ 
 </body>
 </html>

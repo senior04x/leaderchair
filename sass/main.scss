@@ -1,81 +1,85 @@
-.price-old p, .price-new p, .price-old,.price-new{
-    margin: 0;
-    display: flex;
-    gap: 3px;
+.price-old p,
+.price-new p,
+.price-old,
+.price-new {
+  margin: 0;
+  display: flex;
+  gap: 3px;
 }
-.price-new, .price-old{
-    margin-bottom: 10px;
+.price-new,
+.price-old {
+  margin-bottom: 10px;
 }
-.price-old, .product-price-old{
-    text-decoration: line-through;
+.price-old,
+.product-price-old {
+  text-decoration: line-through;
 }
-.desc h3{
-    font-weight: 700;
-    font-size: 34px;
+.desc h3 {
+  font-weight: 700;
+  font-size: 34px;
 }
-#products-container{
+#products-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr)); /* 2 qatorli layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 2fr)
+  ); /* 2 qatorli layout */
   gap: 22px; /* Elementlar orasida bo'sh joy */
 }
 .fh5co-nav-toggle i::after {
-    bottom: -7px;
-    background-color: #328d44;
- 
-    width: 40px;
-  }
-  .fh5co-nav-toggle i::before {
-    top: -7px;
-    background-color: #328d44;
-    
-    width: 40px;
-  }
-  .fh5co-nav-toggle i{
-    top: -7px;
-    background-color: #328d44;
-    width: 30px;
-    
-  }
-  .fh5co-nav-toggle.active i {
-    background: transparent;
-  }
-  .fh5co-nav-toggle.active i::before {
-    background-color: #328d44;
-   
-  }
-  .fh5co-nav-toggle.active i::after {
-    background-color: #328d44;
-    height: 2px;
-  }
+  bottom: -7px;
+  background-color: #328d44;
 
-.icon-bassket{
-    width: 14px;
-    height: 14px;
-    margin-bottom: 3.5px;
-   
+  width: 40px;
 }
-.lead{
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    background-color: transparent;
-    border: none;
-    transition: transform 0.3s ease;
+.fh5co-nav-toggle i::before {
+  top: -7px;
+  background-color: #328d44;
+
+  width: 40px;
+}
+.fh5co-nav-toggle i {
+  top: -7px;
+  background-color: #328d44;
+  width: 30px;
+}
+.fh5co-nav-toggle.active i {
+  background: transparent;
+}
+.fh5co-nav-toggle.active i::before {
+  background-color: #328d44;
+}
+.fh5co-nav-toggle.active i::after {
+  background-color: #328d44;
+  height: 2px;
+}
+
+.icon-bassket {
+  width: 14px;
+  height: 14px;
+  margin-bottom: 3.5px;
+}
+.lead {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  transition: transform 0.3s ease;
+  outline: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  &:hover {
+    color: #386641;
     outline: none;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    &:hover{
-      color: #386641;
-      outline: none;
-      transition: all 0.2s ease;
-      
-    }
+    transition: all 0.2s ease;
+  }
 }
-.logo{
-    width: 150px;
+.logo {
+  width: 150px;
 }
 .blog-img2 {
   display: inline-block; /* Rasmni o'z ichida ushlab turish */
@@ -91,10 +95,10 @@
 .blog-img2:hover img {
   transform: scale(1); /* Hoverda rasmni kattalashtirish */
 }
-.blog-img2{
+.blog-img2 {
   position: relative;
 }
-.img-text{
+.img-text {
   width: 50px;
   position: absolute;
   top: 20px;
@@ -103,7 +107,7 @@
     width: 80px;
   }
 }
-.img-text2{
+.img-text2 {
   width: 100px;
   display: none;
   position: absolute;
@@ -116,40 +120,209 @@
     top: 28px;
   }
 }
-.fh5co-heading{
-font-size: 30px;
-margin-bottom: 10px;
-@media screen and (max-width: 768px){
-  font-size: 23px;
-  margin-top: 15px;
-  margin-bottom: 4px;
+.fh5co-heading {
+  font-size: 30px;
+  margin-bottom: 10px;
+  @media screen and (max-width: 768px) {
+    font-size: 23px;
+    margin-top: 15px;
+    margin-bottom: 4px;
+  }
 }
-}
-.product-description{
+.product-description {
   font-size: 20px;
-margin-bottom: 10px;
-@media screen and (max-width: 768px){
-  font-size: 12px;
-  margin-top: 15px;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 4px;
+  }
 }
-}
-.product-price-old{
+.product-price-old {
   font-size: 20px;
   display: flex;
   margin-bottom: 0;
 }
-.product-price-new{
+.product-price-new {
   font-size: 40px;
   font-weight: 550;
   margin-bottom: 0;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     font-size: 30px;
   }
 }
-.fh5co-footer ul li a{
+.fh5co-footer ul li a {
   font-size: 17px;
 }
-.order-box:nth-child(2){
-background-color: #386641;
+.order-box:nth-child(2) {
+  background-color: #386641;
+}
+
+/* Modalning stilini yaratamiz */
+.modal {
+  display: none; /* Dastlab modal yashirin bo‘ladi */
+  position: fixed;
+  z-index: 1; /* Modal boshqa elementlardan oldin chiqishi uchun */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ekranning to‘liq kengligi */
+  height: auto; /* Ekranning to‘liq balandligi */
+  background-color: rgba(0, 0, 0, 0.5); /* Orqa fonni dim qilish */
+  transition: opacity 0.5s ease; /* Sekin ochilish uchun */
+ 
+}
+
+
+/* Modal ichidagi kontent */
+.modal-content {
+  top: 0;
+  background-color: #fff;
+  margin: 5% auto; /* Markazlashtirish */
+  padding: 20px;
+  border: none;
+  width: 80%; /* Modalning kengligi */
+  max-width: 500px; /* Maksimal kenglik */
+  background-color: transparent;
+  background: #3866413c; /* Qoraytirish (0.5 = 50%) */
+  backdrop-filter: blur(20px); /* Blur effekti */
+  transition: right 0.5s ease;
+  z-index: 1000;
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease; /* Ichki kontentga kirish animatsiyasi */
+}
+
+/* Yopish tugmasi */
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset; /* Orqa fonni shaffof qilib o'rnatish */
+  -webkit-text-fill-color: #fff; /* Matn rangini qora qilish */
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: transparent;
+}
+.modal-content form input,
+.modal-content form textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  outline: none;
+}
+.modal-content form input::placeholder,
+.modal-content form textarea::placeholder {
+  color: #ffffff9c;
+  font-size: 18px;
+}
+
+.modal-content form input:hover,
+.modal-content form textarea:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.modal-content form input:focus,
+.modal-content form textarea:focus {
+  outline: none;
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.15);
+  /* transform: translateY(-3px); */
+  transform: scale(1.03);
+}
+
+.modal-content form label {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.modal-content form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  transition: all 0.5s;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #386641af;
+  backdrop-filter: blur(1px);
+  border: none;
+}
+@media (max-width: 768px){
+  .modal-content form input::placeholder{
+    display: none;
+  }
+}
+.modal-img{
+  width: 40%;
+  border-radius: 10px;
+}
+.modal-box{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.product-title3{
+  color: #fff;
+}
+
+/* Kontent kirish animatsiyasi */
+@keyframes slideIn {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+.quantity-controls{
+  display: flex;
+}
+#quantity{
+  width: 32px;
+  padding: 8px 0;
+  margin-top: 10px;
+  border-radius: 0;
+  color: #fff;
+  transition: all 0.5s;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.btn-modal-order, .minus{
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 0;
+  color: #fff;
+  transition: all 0.5s;
+  font-size: 25px;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
 }
