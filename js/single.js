@@ -20,8 +20,10 @@ function renderProductDetails(product) {
   findElement(".product-description").textContent = product.description;
   const productInput = findElement("#product__input_title");
 const productImg = findElement(".modal-img")
+
 if (productInput,productImg) {
-  productInput.value = product.title;
+  document.title = product.title
+  productInput.value = product.title
   productImg.src = product.imageSrc
 }
 }
