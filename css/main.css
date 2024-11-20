@@ -276,7 +276,6 @@
   margin-bottom: 20px;
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
   -webkit-transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.3s ease;
   transition: -webkit-box-shadow 0.3s ease, -webkit-transform 0.3s ease;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -313,7 +312,6 @@
 .modal-content form input:hover,
 .modal-content form textarea:hover {
   -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
@@ -322,7 +320,6 @@
 .modal-content form textarea:focus {
   outline: none;
   -webkit-box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.15);
   /* transform: translateY(-3px); */
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
@@ -447,4 +444,38 @@
   font-weight: 400;
   background-color: transparent;
   border: none;
+}
+
+.footer-link-box {
+  padding: 40px;
+}
+@media (max-width: 768px) {
+  .footer-link-box {
+    padding: 10px;
+  }
+}
+
+.footer-link-box h2 {
+  font-size: 25px;
+  color: #386641;
+  font-weight: 400;
+}
+
+.footer-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-right: 20px;
+}
+
+.footer-list li a i {
+  font-size: 30px;
+}
+.footer-list li a i:hover {
+  color: #000;
 }/*# sourceMappingURL=main.css.map */
