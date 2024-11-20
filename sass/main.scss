@@ -223,8 +223,11 @@
   font-size: 18px;
   margin-bottom: 20px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* Standart box-shadow */
+  // -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* Standart box-shadow */
+  -moz-box-shadow: 10px 10px 5px #888;
+-webkit-box-shadow: 10px 10px 5px #888;
+box-shadow: 10px 10px 5px #888;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   outline: none;
   position: relative; /* position qo'shish */
@@ -251,11 +254,11 @@
   box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.15); /* Box-shadowni to'g'ri qo'shish */
   transform: scale(1.03);
 }
-.modal-content form input,
-.modal-content form textarea {
-  will-change: box-shadow, transform; /* Performansni yaxshilash */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
-}
+// .modal-content form input,
+// .modal-content form textarea {
+//   will-change: box-shadow, transform; /* Performansni yaxshilash */
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+// }
 
 .modal-content form label {
   color: #fff;
