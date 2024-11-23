@@ -8,7 +8,7 @@ const elWrapperProducts = findElement("#products-container");
 const elTemplate = findElement("#template");
 
 let pageCount = 1;
-const perPage = 4;
+const perPage = 10;
 let filteredProducts = [];
 let basket = []; // Savatcha uchun massiv
 
@@ -74,3 +74,9 @@ function addToBasket(product) {
 function redirectToSinglePage(productId) {
   window.location.href = `single.html?id=${productId}`;
 }
+
+
+
+
+
+
