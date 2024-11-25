@@ -8,7 +8,7 @@ const elWrapperProducts = findElement("#products-container");
 const elTemplate = findElement("#template");
 
 let pageCount = 1;
-const perPage = 10;
+const perPage = 20;
 let filteredProducts = [];
 let basket = []; // Savatcha uchun massiv
 
