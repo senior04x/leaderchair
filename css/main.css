@@ -28,7 +28,7 @@
 #products-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr)); /* 2 qatorli layout */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 2 qatorli layout */
   gap: 22px; /* Elementlar orasida bo'sh joy */
 }
 
@@ -90,6 +90,8 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  text-align: start;
+  padding: 0;
 }
 .lead:hover {
   color: #386641;

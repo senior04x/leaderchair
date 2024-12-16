@@ -18,14 +18,15 @@ function renderProductDetails(product) {
   findElement(".product-price-old").textContent = product.oldPrice + " sum";
   findElement(".product-price-new").textContent = product.newPrice + " sum";
   findElement(".product-description").textContent = product.description;
-  const productInput = findElement("#product__input_title");
-const productImg = findElement(".modal-img")
-
-if (productInput,productImg) {
-  document.title = product.title
-  productInput.value = product.title
-  productImg.src = product.imageSrc
-}
+  const productInput = findElement("#product__input_title2");
+  const productImg = findElement(".modal-img");
+  
+  if (productInput && productImg) {  // Ikki element ham mavjudligini tekshirish
+    document.title = product.title;  // Sahifa sarlavhasini o'zgartirish
+    productInput.value = product.title || "";  // Input maydoniga title qiymatini o'rnatish
+    productImg.src = product.imageSrc;  // Rasminga src ni o'zgartirish
+    console.log(productInput);  
+  }
 }
 
 // URL'dan ID ni olish
